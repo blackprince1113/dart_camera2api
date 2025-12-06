@@ -1,0 +1,51 @@
+name: my_medicine_app
+description: "Flutter Medicine App"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^2.13.0
+  firebase_auth: ^4.4.0
+  flutter_tts: ^3.5.3
+  shared_preferences: ^2.2.2
+  image_picker: ^1.1.1
+  url_launcher: ^6.2.5
+  google_fonts: ^6.2.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  excel: ^4.0.2        # อ่าน .xlsx
+  csv: ^6.0.0          # อ่าน .csv
+  google_fonts: ^6.2.1
+  flutter_tts: ^3.8.3
+  image_picker: ^1.1.2
+  shared_preferences: ^2.3.2
+
+flutter:
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/
+    - assets/images/pills/paracetamol.jpg
+    - assets/images/pills/Aspirin.jpg
+    - assets/images/pills/Amoxicillin.jpg
+    - assets/data/meds.xlsm
+    - assets/images/amldac/
+
+# Plugin กำหนดให้รองรับ Android เท่านั้น
+plugin:
+  platforms:
+    android:
+      package: com.dexterous.flutterlocalnotifications
+      pluginClass: FlutterLocalNotificationsPlugin
