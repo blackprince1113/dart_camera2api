@@ -228,7 +228,7 @@ class _ScanMedicinePageState extends State<ScanMedicinePage> {
                     style: GoogleFonts.kanit(),
                     decoration: InputDecoration(
                       labelText: 'ชื่อยา (ระบุเพิ่มเติม)',
-                      hintText: 'เช่น ยาพาราเซตามอล...',
+                      hintText: 'เช่น Alfuzosin...',
                       prefixIcon: const Icon(Icons.edit_note_rounded, color: Color(0xFF10B981)),
                       filled: true,
                       fillColor: Colors.white,
