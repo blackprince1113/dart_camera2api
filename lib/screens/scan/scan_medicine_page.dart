@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+import '../../services/firebase_api.dart';
 import 'full_screen_camera_preview.dart';
 import '../../services/scan_api_service.dart';
 
@@ -67,6 +68,7 @@ class _ScanMedicinePageState extends State<ScanMedicinePage> {
   }
 
   Future<void> _goResult() async {
+    getMedicineWithBrands("Alfuzosin");
     if (_image == null) {
       _showSnackBar('โปรดถ่ายรูปหรือเลือกภาพยาก่อนดูผลลัพธ์');
       return;
@@ -222,30 +224,6 @@ class _ScanMedicinePageState extends State<ScanMedicinePage> {
                       ],
                     ),
                   ],
-                  const SizedBox(height: 24),
-                  TextField(
-                    controller: _nameController,
-                    style: GoogleFonts.kanit(),
-                    decoration: InputDecoration(
-                      labelText: 'ชื่อยา (ระบุเพิ่มเติม)',
-                      hintText: 'เช่น Alfuzosin...',
-                      prefixIcon: const Icon(Icons.edit_note_rounded, color: Color(0xFF10B981)),
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide: BorderSide.none,
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide: BorderSide(color: const Color(0xFF10B981).withOpacity(0.1)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide: const BorderSide(color: Color(0xFF10B981), width: 1.5),
-                      ),
-                    ),
-                  ),
                   const SizedBox(height: 32),
                   SizedBox(
                     width: double.infinity,

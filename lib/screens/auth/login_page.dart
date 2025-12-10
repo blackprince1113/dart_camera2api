@@ -146,6 +146,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(height: 48),
+
+                  // White Card
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -242,7 +244,7 @@ class _LoginPageState extends State<LoginPage> {
                               child: Text(
                                 'สมัครสมาชิก',
                                 style: GoogleFonts.kanit(
-                                  color: const Color(0xFF10B981),
+                                  color: Color(0xFF10B981),
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -250,6 +252,7 @@ class _LoginPageState extends State<LoginPage> {
                           ],
                         ),
                         const SizedBox(height: 8),
+
                         if (errorMessage.isNotEmpty)
                           Container(
                             padding: const EdgeInsets.all(12),
@@ -272,7 +275,7 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Text(
                                     errorMessage,
                                     style: GoogleFonts.kanit(
-                                      color: const Color(0xFFDC2626),
+                                      color: Color(0xFFDC2626),
                                       fontSize: 14,
                                     ),
                                   ),
@@ -281,6 +284,8 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         const SizedBox(height: 24),
+
+                        // Login button
                         Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -295,10 +300,9 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFF10B981)
-                                    .withOpacity(0.4),
+                                color: Color(0xFF10B981).withOpacity(0.4),
                                 blurRadius: 12,
-                                offset: const Offset(0, 4),
+                                offset: Offset(0, 4),
                               ),
                             ],
                           ),
@@ -324,81 +328,6 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 32),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 1,
-                          color: Colors.white30,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        child: Text(
-                          'หรือ',
-                          style: GoogleFonts.kanit(
-                            color: Colors.white70,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 1,
-                          color: Colors.white30,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 56,
-                        height: 56,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 8,
-                              offset: const Offset(0, 2),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.g_mobiledata,
-                          color: Color(0xFF4285F4),
-                          size: 28,
-                        ),
-                      ),
-                      const SizedBox(width: 16),
-                      Container(
-                        width: 56,
-                        height: 56,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 8,
-                              offset: const Offset(0, 2),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.apple,
-                          color: Colors.black,
-                          size: 28,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 48),
                 ],
               ),
             ),
